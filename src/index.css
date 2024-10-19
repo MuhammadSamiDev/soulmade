@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "DM Sans", system-ui;
+}
+.siderStyle {
+  height: 100vh;
+  position: fixed !important;
+  inset-inline-start: 0;
+  top: 0;
+  bottom: 0;
+  background: #075929 !important;
+}
+.searchBar {
+  width: 250px;
+}
+.layout {
+  margin: 0 16px 24px;
+  padding: 24px;
+  min-height: calc(100vh - 89px);
+  overflow: initial;
+}
+.tab {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  gap: 20px;
+  background-color: transparent;
+}
+.tab::-webkit-scrollbar {
+  display: none;
+}
+.tab::-moz-scrollbar {
+  display: none;
+}
+.gridWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  width: 100%;
+}
+.desc {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  width: 100%;
+}
+/* ant d classes override */
+.ant-menu-item {
+  color: #fff !important;
+}
+.sideBarItems2 .ant-menu-item {
+  background: #00000029;
+}
+.sideBarItems1 .ant-menu-item {
+  padding: 0px 25px;
+}
+.ant-menu-item:focus-visible {
+  outline: 4px solid #075929 !important;
+}
+.ant-menu-light {
+  color: #fff !important;
+  background: none !important;
+}
+.sideBarItems1 .ant-menu-item-selected {
+  background: none !important;
+}
+.sideBarItems2 .ant-menu-item-selected {
+  background: #fff !important;
+  color: #075929 !important;
+}
+.ant-radio-button-wrapper:hover {
+  color: #075929 !important;
+}
+.ant-radio-button-wrapper {
+  border: 2px solid #f5f5f5 !important;
+  border-block-start-width: 2 !important;
+  border-inline-start-width: 2 !important;
+  border-inline-end-width: 2 !important;
+  border-radius: 5px !important;
+  background: #f5f5f5 !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+.ant-radio-button-wrapper-checked {
+  color: #075929 !important;
+  border: 2px solid #075929 !important;
+  background: #f5f5f5 !important;
+}
+.ant-radio-group {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.ant-radio-button-wrapper:first-child {
+  border-inline-start: 2 !important;
+  border-start-start-radius: 5 !important;
+  border-end-start-radius: 5 !important;
+}
+.ant-radio-button-wrapper:last-child {
+  border-start-end-radius: 5 !important;
+  border-end-end-radius: 5 !important;
+}
+.ant-radio-button-wrapper:not(:first-child)::before {
+  display: none !important;
+}
+.ant-card-body {
+  padding: 16px !important;
+}
+.ant-btn:focus-visible {
+  outline: none !important;
+}
+.ant-input-group-addon {
+  background: #fff !important;
+}
+@media (max-width: 423px) {
+  .searchBar {
+    width: auto;
+  }
+  .layout {
+    margin: 0;
+    padding: 10px;
+  }
+  .gridWrapper {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
